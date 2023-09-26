@@ -377,7 +377,7 @@ func (a *App) error(message string, args ...any) {
 }
 
 func (a *App) NewWebviewWindowWithOptions(windowOptions WebviewWindowOptions) Window {
-	newWindow := newWindow(windowOptions)
+	newWindow := NewWindow(windowOptions)
 	id := newWindow.ID()
 
 	a.windowsLock.Lock()
@@ -770,7 +770,7 @@ func (a *App) handleWindowKeyEvent(event *windowKeyEvent) {
 		return
 	}
 	// Get callback from window
-	window.handleKeyEvent(event.acceleratorString)
+	window.HandleKeyEvent(event.acceleratorString)
 }
 
 func (a *App) AssetServerHandler() func(rw http.ResponseWriter, req *http.Request) {
