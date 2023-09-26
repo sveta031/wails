@@ -103,3 +103,7 @@ func (s *linuxSystemTray) destroy() {
 	// Remove the status item from the status bar and its associated menu
 	//	C.systemTrayDestroy(s.nsStatusItem)
 }
+
+func (s *linuxSystemTray) openMenu() {
+
+}
