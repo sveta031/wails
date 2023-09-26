@@ -251,6 +251,10 @@ func (w Window) HandleDragAndDropMessage(filenames []string) {
 
 }
 
+func (w Window) HandleKeyEvent(acceleratorString string) {
+
+}
+
 func (w Window) HandleMessage(message string) {
 	log.Println("HandleMessage", message)
 }
