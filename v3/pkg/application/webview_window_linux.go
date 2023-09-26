@@ -465,3 +465,7 @@ func (w *linuxWebviewWindow) print() error {
 	w.execJS("window.print();")
 	return nil
 }
+
+func (w *linuxWebviewWindow) handleKeyEvent(acceleratorString string) {
+
+}

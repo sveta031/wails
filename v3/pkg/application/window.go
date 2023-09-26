@@ -37,6 +37,7 @@ type Window interface {
 	IsFullscreen() bool
 	IsMaximised() bool
 	IsMinimised() bool
+	HandleKeyEvent(acceleratorString string)
 	Maximise() Window
 	Minimise() Window
 	Name() string

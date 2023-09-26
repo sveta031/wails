@@ -342,7 +342,7 @@ func (w *WebviewWindow) Show() Window {
 		return w
 	}
 	if w.impl == nil {
-		InvokeSync(w.run)
+		InvokeSync(w.Run)
 		return w
 	}
 	InvokeSync(w.impl.show)
@@ -1101,7 +1101,7 @@ func (w *WebviewWindow) processKeyBinding(acceleratorString string) bool {
 	return true
 }
 
-func (w *WebviewWindow) handleKeyEvent(acceleratorString string) {
+func (w *WebviewWindow) HandleKeyEvent(acceleratorString string) {
 	if w.impl == nil {
 		return
 	}
